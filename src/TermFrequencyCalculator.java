@@ -21,12 +21,17 @@ public class TermFrequencyCalculator implements ITermFrequency {
             
             // TF for Term (word) X in Song S is calculated as frequency of that X divided 
             // by total number of words in the lyric
-            
-            ////////////////////////////
-            //WRITE HERE
-            //////////////////////////
-            
-            
+            int wCount = 0;
+            for(String word : words){
+                if(word.toLowerCase().equals(word)){
+                    wCount++;
+                }
+                double teamFrequency = (double) wCount / words.length;
+
+                tempMap.put(word, teamFrequency);
+            }
+
+
             // After Calculaion
             result.put(songTitle, tempMap);
         }
