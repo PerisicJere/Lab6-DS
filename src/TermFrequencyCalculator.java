@@ -1,5 +1,3 @@
-package Lab6;
-
 import java.util.TreeMap;
 
 public class TermFrequencyCalculator implements ITermFrequency {

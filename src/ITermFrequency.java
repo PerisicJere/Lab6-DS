@@ -1,5 +1,3 @@
-package Lab6;
-
 import java.util.TreeMap;
 
 public interface ITermFrequency {
