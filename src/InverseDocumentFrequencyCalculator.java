@@ -1,3 +1,4 @@
+import java.util.Collection;
 import java.util.TreeMap;
 
 public class InverseDocumentFrequencyCalculator implements IInverseFreq {
@@ -19,11 +20,24 @@ public class InverseDocumentFrequencyCalculator implements IInverseFreq {
             // and T is the number of songs having term X
             
             ////////////////////////////
-            //WRITE HERE
+            // Creator: Samuel Fickett
+            final double SONGS = songLyrics.keySet().size(); //"N" from N/T
+            /*
+             * These for loops cycle through all of the words,
+             * looking through each song to check if the desired word 
+             * is in the current song. A counter is added to for each occurance.
+             */
+            for (int i = 0; i < words.length; ++i) {
+            	int totSongs = 0;
+            	for (String title: songLyrics.keySet()) {
+            		if (songLyrics.get(title).contains(words[i])) {
+            			++totSongs; // "T" from N/T
+            		}
+            	}
+            	result.put(words[i], Math.log10(SONGS/totSongs));
+            }
             //////////////////////////
         }
-        
         return result;
     }
-
 }
