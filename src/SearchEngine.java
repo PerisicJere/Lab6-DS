@@ -44,7 +44,7 @@ import java.util.TreeMap;
 	                ////////////////////////////
 	                //WRITE HERE
 	                //////////////////////////
-	            	score =+ IDFValues.get(queryWord) * TFValues.get(queryWord).get(queryWord);
+	            	score =+ IDFValues.get(queryWord) * TFValues.get(songTitle).get(queryWord);
 	            }
 	            
 	            if (score>maxScore)
