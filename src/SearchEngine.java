@@ -43,7 +43,9 @@ import java.util.TreeMap;
 	                
 	                ////////////////////////////
 	                //WRITE HERE
-	                //////////////////////////
+	                ///////////////////////////
+			    //Patrick Sullivan
+			    //Takes the double from the IDF Values and then multiplies it with the corresponding Inverse value with the songtitle of the outer loop
 	            	score =+ IDFValues.get(queryWord) * TFValues.get(songTitle).get(queryWord);
 	            }
 	            
